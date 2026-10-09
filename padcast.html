@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>سایت پادکست</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jplayer/2.9.2/skin/blue.monday/css/jplayer.blue.monday.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background:linear-gradient(to right, #59B8DE, #F2DFA6, #F09ED9);
+            color: #1F0000;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 36px;
+        }
+
+        .nav {
+            background-color: #f1f1f1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .nav a {
+            color: black;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        .nav a:hover {
+            background-color: #ddd;
+        }
+
+        .nav a.active {
+            background-color: #666;
+            color: white;
+        }
+
+        .main {
+            background-color: white;
+            padding: 20px;
+        }
+
+        .podcast {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .podcast img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .podcast-info {
+            margin-left: 20px;
+        }
+
+        .podcast-info h3 {
+            font-size: 24px;
+        }
+
+        .podcast-info p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        .footer {
+            background:linear-gradient(to right, #59B8DE, #F2DFA6, #F09ED9);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        @media screen and (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+            }
+
+            .podcast {
+                flex-direction: column;
+            }
+
+            .podcast img {
+                width: 100%;
+                height: auto;
+            }
+
+            .podcast-info {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body background="abstract_background_molecules_technology_with_polygonal_shapes_connecting.jpg">
+    <div class="container">
+        <div class="header">
+            <h1>پادکست ها</h1><br>
+            <p>یک سایت ساده برای اوقات فراغت شما</p>
+        </div>
+        <br><br><br>
+        <div class="main">
+            <div class="podcast">
+                <img src="p1.jpg" alt="پادکست 1">
+                <div class="podcast-info">
+                    <h3 align="center">پادکست: مدرسه زندگی</h3><br>
+                    <p align="center">رد پای کربنی و ایده نجات اقلیمی با تعدیل جمعیت</p><br>
+                    <audio controls style="margin-left:100px;width: 800px">
+                      <source src="p1.mp3" type="audio/mp3">
+                    </audio>
+                    <div id="player1"></div>
+                </div>
+            </div>
+			<br>
+            <div class="podcast">
+                <img src="p2.jpg" alt="پادکست 2">
+                <div class="podcast-info">
+                    <h3 align="center">پادکست: نامه چیف سیاتل به رئیس جمهور</h3><br>
+                    <p align="center">از اثرات دکتر مجتبی شکوری</p><br>
+					<audio controls style="margin-left:100px;width: 800px">
+                      <source src="p2.mp3" type="audio/mp3">
+                    </audio>
+                    <div id="player2"></div>
+                </div>
+            </div>
+			 <div class="podcast">
+                <img src="p3.jpg" alt="پادکست 3">
+                <div class="podcast-info">
+                    <h3 align="center">پادکست: سبکِتو</h3><br>
+                    <p align="center">چطور شب ها راحت بخوابیم</p><br>
+                    <audio controls style="margin-left:100px;width: 800px">
+                      <source src="p3.mp3" type="audio/mp3">
+                    </audio>
+                    <div id="player1"></div>
+                </div>
+            </div>
+			<br>
+            <div class="podcast">
+                <img src="p4.jpg" alt="پادکست 4">
+                <div class="podcast-info">
+                    <h3 align="center">پادکست : نافرمانی راهی برای رشد  </h3><br>
+					<p align="center">از اثرات دکتر مجتبی شکوری</p><br>
+					<br>
+					   <audio controls style="margin-left:100px;width: 800px">
+                      <source src="p4.mp3" type="audio/mp3">
+                    </audio> 
+                       <div id="player4"></div>
+                </div>
+            </div>
+			
+			 <div class="podcast">
+                <img src="p5.jpg" alt="پادکست 5">
+                <div class="podcast-info">
+                    <h3 align="center">پادکست: نافرمانی راهی برای رشد</h3><br>
+                    <p align="center">از اثرات دکتر مجتبی شکوری</p><br>
+                    <audio controls style="margin-left:100px;width: 800px">
+                      <source src="p6.mp3" type="audio/mp3">
+                    </audio>
+                    <div id="player1"></div>
+                </div>
+            </div>
+			<br>
+			<div class="podcast">
+                <img src="p6.jpg" alt="پادکست 6">
+                <div class="podcast-info">
+                    <h3 align="center">پادکست:  کتاب جیبی – قانون جذب</h3><br>
+                    <p align="center">با این قانون الهام بخش زندگی ات را تغییر بده.</p><br>
+                    <audio controls style="margin-left:100px;width: 800px">
+                      <source src="p7.mp3" type="audio/mp3">
+                    </audio>
+                    <div id="player1"></div>
+                </div>
+            </div>
+			<br>
+			 <div class="podcast">
+                <img src="p7.jpg" alt="پادکست 7">
+                <div class="podcast-info">
+                    <h3 align="center">پادکست: مدرسه زندگی</h3><br>
+                    <p align="center">محرومیت از خواب</p><br>
+                    <audio controls style="margin-left:100px;width: 800px">
+                      <source src="p7.mp3" type="audio/mp3">
+                    </audio>
+                    <div id="player1"></div>
+                </div>
+            </div>
+			<br>
+			 
+			 
+			 <div class="podcast">
+                <img src="p8.jpg" alt="پادکست 8">
+                <div class="podcast-info">
+                    <h3 align="center">پادکست:  امروز من</h3><br>
+                    <p align="center">علاقه ات رو بشناس!</p><br>
+                    <audio controls style="margin-left:100px;width: 800px">
+                      <source src="p8.mp3" type="audio/mp3">
+                    </audio>
+                    <div id="player1"></div>
+                </div>
+            </div>
+			<br>
+			 <div class="podcast">
+                <img src="p9.jpg" alt="پادکست 9">
+                <div class="podcast-info">
+                    <h3 align="center">پادکست: سبکتو</h3><br>
+                    <p align="center">خوش شانسی از رویا تا واقعیت</p><br>
+                    <audio controls style="margin-left:100px;width: 800px">
+                      <source src="p9.mp3" type="audio/mp3">
+                    </audio>
+                    <div id="player1"></div>
+                </div>
+            </div>
+			<div class="podcast">
+                <img src="p1.jpg" alt="پادکست 10">
+                <div class="podcast-info">
+                    <h3 align="center">پادکست: مدرسه زندگی</h3><br>
+                    <p align="center">چرت روزانه و خواب قیلوله خوب است یا بد؟</p><br>
+                    <audio controls style="margin-left:100px;width: 800px">
+                      <source src="p10.mp3" type="audio/mp3">
+                    </audio>
+                    <div id="player1"></div>
+                </div>
+            </div>
+			
+        </div>
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فوتر پاستیلی</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        /* فونت فارسی حرفه‌ای برای متن‌های سایت */
+        @import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@latest/fonts/webfonts/vazirmatn.css');
+
+        /* فونت لاتین زیبا برای "Moka" */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .footer {
+            margin-top: auto;
+            background: linear-gradient(135deg, #ffd3e0, #b2ebf2, #ffeaa7);
+            padding: 30px 15px;
+            text-align: center;
+            color: #000;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* آیکون‌های شبکه‌های اجتماعی */
+        .footer .social-icons {
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: slideUp 1.5s ease-out forwards;
+        }
+
+        .footer .social-icons a {
+            display: inline-block;
+            margin: 0 15px;
+            color: #000;
+            font-size: 35px;
+            transition: all 0.3s ease;
+        }
+
+        /* تغییر رنگ هر آیکون هنگام هاور */
+        .footer .social-icons a.telegram:hover { color: #0088cc; }
+        .footer .social-icons a.whatsapp:hover { color: #25d366; }
+        .footer .social-icons a.instagram:hover { color: #BF25F1; }
+        .footer .social-icons a.youtube:hover { color: #ff0000; }
+
+        /* لینک‌های فوتر */
+        .footer .footer-links {
+            margin-top: 15px;
+            opacity: 0;
+            animation: slideLeft 1.5s ease-out 0.5s forwards;
+        }
+
+        .footer .footer-links a {
+            display: inline-block;
+            margin: 0 10px;
+            color: #000;
+            font-size: 16px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: bold;
+        }
+
+        .footer .footer-links a:hover { color: #F97F6D; }
+
+        /* متن فوتر */
+        .footer p {
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: 500;
+            opacity: 0;
+            animation: slideLeft 3s ease-out 0.7s forwards;
+        }
+
+        /* نام Moka */
+        .footer .brand {
+            position: absolute;
+            bottom: 190px;
+			left: auto;
+            font-family: 'Poppins', sans-serif;
+            font-size: 32px;
+            font-weight: 600;
+            color: #000;
+            opacity: 0.8;
+            animation: slideRight 2s ease-in-out forwards;
+        }
+
+        /* انیمیشن اسلاید به سمت بالا برای آیکون‌ها */
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* انیمیشن اسلاید به چپ برای متن‌های فارسی */
+        @keyframes slideLeft {
+            from { transform: translateX(-50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        /* انیمیشن اسلاید به راست برای Moka */
+        @keyframes slideRight {
+            from { right: -200px; opacity: 0; }
+            to { right: 15px; opacity: 1; }
+        }
+
+    </style>
+</head>
+<body>
+	
+	<footer class="footer">
+        <div class="social-icons">
+			<br><br><br><br>
+            <a href="#" class="telegram"><i class="fab fa-telegram"></i></a>
+            <a href="#" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="footer-links">
+            <a href="we.html">درباره ما</a>
+            <a href="login.html">ورود</a>
+            <a href="index.php">خانه</a>
+        </div>
+        <p>تمامی حقوق محفوظ است | طراحی شده توسط موکا</p>
+        
+        <!-- نام "Moka" با افکت اسلاید -->
+        <div class="brand">Moka</div>
+    </footer>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jplayer/2.9.2/jplayer/jquery.jplayer.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#player1").jPlayer({
+                ready: function () {
+                    $(this).jPlayer("setMedia", {
+                        mp3: "podcast1.mp3"
+                    });
+                },
+                swfPath: "/js",
+                supplied: "mp3"
+            });
+
+            $("#player2").jPlayer({
+                ready: function () {
+                    $(this).jPlayer("setMedia", {
+                        mp3: "podcast2.mp3"
+                    });
+                },
+                swfPath: "/js",
+                supplied: "mp3"
+            });
+
+            $("#player3").jPlayer({
+                ready: function () {
+                    $(this).jPlayer("setMedia", {
+                        mp3: "podcast3.mp3"
+                    });
+                },
+                swfPath: "/js",
+                supplied: "mp3"
+            });
+        });
+    </script>
+</body>
+</html>
